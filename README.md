@@ -1,1 +1,1 @@
-# AetherZen-Products-v0
+# AetherZen Products Showcase
