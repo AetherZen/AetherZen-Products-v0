@@ -1,2 +1,2 @@
 # AetherZen Products Showcase
-## deployed on [aetherzenproducts](aetherzenproducts.vercel.app)
+## deployed on [aetherzenproducts](https://aetherzenproducts.vercel.app)
