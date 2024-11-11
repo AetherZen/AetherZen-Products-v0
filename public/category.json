@@ -1,0 +1,33 @@
+[{
+    "id": 1,
+    "category_name": "stationary",
+    "category_imgUrl": "https://i.postimg.cc/DfWQRZg0/Frame-21.png"
+  }, {
+    "id": 2,
+    "category_name": "medicine & healthcare",
+    "category_imgUrl": "https://i.postimg.cc/vB49Rq5k/Frame-21-1.png"
+  }, {
+    "id": 3,
+    "category_name": "watch",
+    "category_imgUrl": "https://i.postimg.cc/mgTHZ2QQ/Frame-21-2.png"
+  }, {
+    "id": 4,
+    "category_name": "medicine & healthcare",
+    "category_imgUrl": "https://i.postimg.cc/JnHyYyLW/Frame-21-3.png"
+  }, {
+    "id": 5,
+    "category_name": "agency",
+    "category_imgUrl": "https://i.postimg.cc/KjX16ZG3/Frame-21-4.png"
+  }, {
+    "id": 6,
+    "category_name": "women's world",
+    "category_imgUrl": "https://i.postimg.cc/BnhXq5Z0/Frame-21-5.png"
+  }, {
+    "id": 7,
+    "category_name": "watch",
+    "category_imgUrl": "https://i.postimg.cc/9XG04HX1/Frame-21-6.png"
+  }, {
+    "id": 8,
+    "category_name": "fashion & clothing",
+    "category_imgUrl": "https://i.postimg.cc/9fRFCvNd/Frame-21-7.png"
+  }]
