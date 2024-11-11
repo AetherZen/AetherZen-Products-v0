@@ -5,8 +5,9 @@ import WhyUs from "@/components/WhyUs/WhyUs";
 
 export default function Home() {
   return (
-    <main>
-      <MarqueeNews />
+  
+    <main className="min-h-[50vh]">
+       <MarqueeNews />
       <WhyUs />
     </main>
   );
