@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <main className="min-h-[50vh]">
       <CategoryHome />
-      {/* <MarqueeNews /> */}
-      {/* <WhyUs /> */}
+      <MarqueeNews />
+      <WhyUs />
       <FeaturesHome />
     </main>
   );
