@@ -1,3 +1,5 @@
+
+import CountUp from "@/components/CountUp/CountupSection";
 import CategoryHome from "@/components/categoryHome/CategoryHome";
 import FeaturesHome from "@/components/FeaturesHome/FeaturesHome";
 import MarqueeNews from "@/components/MarqueeSection/MarqueeNews";
@@ -8,7 +10,8 @@ export default function Home() {
   return (
     <main className="min-h-[50vh]">
       <CategoryHome />
-      <MarqueeNews />
+       <MarqueeNews />
+       <CountUp />
       <WhyUs />
       <FeaturesHome />
     </main>
