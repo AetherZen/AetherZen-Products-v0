@@ -1,3 +1,4 @@
+
 import CountUp from "@/components/CountUp/CountupSection";
 import CategoryHome from "@/components/categoryHome/CategoryHome";
 import MarqueeNews from "@/components/MarqueeSection/MarqueeNews";
