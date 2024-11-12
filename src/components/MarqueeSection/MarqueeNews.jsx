@@ -19,7 +19,7 @@ const MarqueeNews = () => {
 
 
   return (
-    <div>
+    <div className="">
       <Marquee>
         <div className="uppercase flex items-center text-5xl border-red-100 border-t-[1px] border-b-[1px] py-8">
           {marqueeData.map((item, index) => (
