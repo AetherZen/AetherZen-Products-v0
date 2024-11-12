@@ -1,7 +1,10 @@
+"use client";
 import Image from "next/image";
 import ImageLoader from "../shared/imageLoader/ImageLoader";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
+import MarqueeNews from "../MarqueeSection/MarqueeNews";
+import { HiArrowLongDown } from "react-icons/hi2";
 
 const WebsiteCategory = () => {
   const websites = [
@@ -40,25 +43,66 @@ const WebsiteCategory = () => {
 
   return (
     <div>
-      <div>
-        <div className="flex flex-col items-center py-10 bg-gradient-to-b from-white to-gray-100">
+      <div className="bg-gradient-to-r from-pink-100 to-white">
+        <div className="flex lg:items-center justify-between items-start max-w-7xl mx-auto py-24 px-8 ">
           {/* Title */}
-          <h1 className="lg:text-4xl md:text-2xl text-xl font-bold mb-4 text-center">
-            BUSINESS WEBSITE{" "}
-            <span className="inline-block">
+          <h1 className="lg:text-5xl md:text-2xl text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
+            WHAT TYPE TEMPLATE WE PROVIDE
+
+
+            <span className="inline-block md:translate-y-[8.5px]  translate-y-[8px]">
               <Image
-                className="h-8 w-5  lg:h-11 pt-4 lg:w-6 object-cover"
-                src="https://i.postimg.cc/NjZjWfFf/Brutalist-69.png"
-                alt="icon"
+                className="h-5 w-5  md:h-10 md:w-12  lg:h-11 lg:w-14 object-cover text-center"
+                src="https://i.postimg.cc/Dz3s8L3X/Brutalist-70.png"
+                alt="why us"
                 height={500}
                 width={400}
-                loader={ImageLoader}
               />
             </span>
+            
           </h1>
 
+          {/* Scroll Down Button */}
+          <Link href="#category">
+            <div className="flex flex-col items-center space-y-2 cursor-pointer">
+              <div className="w-[70px] h-[70px] lg:w-[80px] lg:h-[80px] border border-gray-700 rounded-full flex items-center justify-center">
+                <p className="text-xs text-center">SCROLL DOWN</p>
+              </div>
+              {/* <HiArrowLongDown className="text-black text-2xl" /> */}
+              <Image
+                className=" h-10 w-1  lg:h-10 lg:w-1 object-cover"
+                src="https://i.postimg.cc/sDZB3DH8/Arrow-1.png"
+                alt="why us"
+                height={500}
+                width={400}
+              />
+            </div>
+          </Link>
+        </div>
+      </div>
+      <MarqueeNews />
+
+      <div>
+        <div className="flex flex-col items-center  pt-5 bg-gradient-to-b from-white to-gray-100">
+          {/* Title */}
+          <div className="lg:text-4xl md:text-2xl text-xl lg:py-12 py-10 font-bold text-black flex items-center">
+            <h1>BUSiNESS WEBSITE</h1>
+            <span className="lg:block hidden">
+              <Image
+                className="h-5 w-5  md:h-10 md:w-12  lg:h-10 lg:w-12 object-cover text-center"
+                src="https://i.postimg.cc/Dz3s8L3X/Brutalist-70.png"
+                alt="why us"
+                height={500}
+                width={400}
+              />
+            </span>
+          </div>
+
           {/* Grid Container */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 my-10 gap-y-10">
+          <div
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 my-10 gap-y-10"
+            id="category"
+          >
             {websites?.map((site) => (
               <div key={site.id} className="flex flex-col items-center">
                 <div className="relative w-full aspect-w-16 aspect-h-9 overflow-hidden border-none">
