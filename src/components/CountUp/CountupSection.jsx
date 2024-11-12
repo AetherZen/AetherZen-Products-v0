@@ -28,7 +28,7 @@ const CountupSection = () => {
 
   return (
     <div className="mx-auto w-full max-w-[1400px] px-2.5 md:px-10 lg:my-20 my-10">
-      <div className="rounded-lg shadow-md p-8">
+      <div className="rounded-lg shadow-sm p-8">
         <div>
           <p className="lg:text-base text-sm font-medium text-black text-justify">
             “”WELCOME MASSAHE”” Ipsum is simply dummy text of the printing and

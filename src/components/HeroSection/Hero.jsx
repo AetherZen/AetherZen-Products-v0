@@ -77,7 +77,7 @@ const Hero = () => {
             <input
               type="text"
               placeholder="Search..."
-              className="w-full py-3 pl-5 pr-10 text-gray-700 bg-white border rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-red-200 border-none"
+              className="w-full py-3 pl-5 pr-10 text-gray-700 bg-white border rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-red-100 border-none"
             />
             <button className="absolute top-0 right-0 h-full px-3 text-black">
               <LuSearch className="text-2xl font-bold " />
