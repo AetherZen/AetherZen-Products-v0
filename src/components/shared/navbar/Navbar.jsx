@@ -8,6 +8,7 @@ import { FiUser } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa";
 import { SideNav } from "./SideNav";
 import { CiSearch } from "react-icons/ci";
+import { ProductSearchModal } from "../ProductSearchModal/ProductSearchModal";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -65,9 +66,7 @@ const Navbar = () => {
         ))}
       </div>
       <div className="flex gap-5 items-center">
-        <Link className="lg:hidden" href="/">
-          <CiSearch className="text-2xl" />
-        </Link>
+        <ProductSearchModal trigger={( <CiSearch className="text-2xl" />)} />
         <Link href="/">
           <AiOutlineShoppingCart className="text-2xl" />
         </Link>{" "}
