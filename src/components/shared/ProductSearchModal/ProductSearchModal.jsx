@@ -18,7 +18,7 @@ export function ProductSearchModal({ trigger }) {
   const filteredData = data.filter((item) =>
     item.category_name.includes(searchInput)
   );
-  console.log(filteredData);
+  // console.log(filteredData);
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
