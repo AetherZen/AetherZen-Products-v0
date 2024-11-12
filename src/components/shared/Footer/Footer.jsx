@@ -55,7 +55,7 @@ const Footer = () => {
           </ul>
 
           <div className="flex flex-col lg:flex-row justify-between flex-wrap mt-8">
-            <p className="order-last lg:order-first text-sm md:text-base text-center lg:text-left mt-4 lg:mt-0">@Copyright {new Date().getFullYear()}. All Rights <br /> Reserved.</p>
+            <p className="order-last lg:order-first text-sm md:text-base text-center lg:text-left mt-4 lg:mt-0">@Copyright 2024. All Rights <br /> Reserved.</p>
             <div className="flex flex-col lg:flex-row items-center flex-wrap gap-3">
               <p className="text-sm md:text-base">Follow Us</p>
               <div className="flex items-center gap-3">
