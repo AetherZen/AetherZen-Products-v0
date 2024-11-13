@@ -13,12 +13,11 @@ import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 
 export function ProductSearchModal({ trigger }) {
-  //   const [filteredData, setFilteredData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const filteredData = data.filter((item) =>
     item.category_name.includes(searchInput)
   );
-  console.log(filteredData);
+
   return (
     <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
@@ -41,16 +40,18 @@ export function ProductSearchModal({ trigger }) {
               placeholder="Search"
             />
           </div>
-         {searchInput?.length > 0 && <div className="bg-white rounded-b-lg max-h-72 overflow-y-scroll px-5 py-8 space-y-4">
-            {filteredData?.map((item, idx) => (
-              <p
-                key={idx}
-                className="bg-gray-100 text-lg pl-4 py-4 text-gray-500 duration-200  hover:bg-gray-200 cursor-pointer border rounded-lg shadow-sm px-2 "
-              >
-                {item.category_name}
-              </p>
-            ))}
-          </div>}
+          {searchInput?.length > 0 && (
+            <div className="bg-white rounded-b-lg max-h-72 overflow-y-scroll px-5 py-8 space-y-4">
+              {filteredData?.map((item, idx) => (
+                <p
+                  key={idx}
+                  className="bg-gray-100 text-lg pl-4 py-4 text-gray-500 duration-200  hover:bg-gray-200 cursor-pointer border rounded-lg shadow-sm px-2 "
+                >
+                  {item.category_name}
+                </p>
+              ))}
+            </div>
+          )}
         </div>
         <DialogFooter></DialogFooter>
       </DialogContent>
