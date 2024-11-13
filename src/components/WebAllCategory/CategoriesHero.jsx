@@ -9,7 +9,7 @@ const CategoriesHero = () => {
         <div className="flex lg:items-center justify-between items-start max-w-7xl mx-auto lg:py-24 py-7 px-8 ">
           {/* Title */}
           <div className="">
-            <h1 className="lg:text-5xl md:text-2xl text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
+            <h1 className="lg:text-5xl md:text-2xl text-xl font-bold text-black flex-1 md:max-w-[60%] max-w-[90%]">
               WHAT TYPE TEMPLATE WE PROVIDE
             </h1>
             <p className="lg:text-base text-sm mt-6 md:max-w-[80.5%] md:block hidden">
