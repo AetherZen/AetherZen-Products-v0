@@ -20,7 +20,7 @@ export default function ShowCaseSection() {
   const demoArray = Array(9).fill(0);
 
   return (
-    <div className="section-padding-x">
+    <div className="section-padding-x section-padding-y">
       <div className=" grid grid-rows-12 grid-cols-12 gap-y-12  lg:gap-12 section-padding-y">
         {/* carousel */}
         <div className="col-span-12 row-span-6 lg:row-span-12 lg:col-span-8">
