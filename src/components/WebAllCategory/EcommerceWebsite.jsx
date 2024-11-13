@@ -39,7 +39,7 @@ const EcommerceWebsite = () => {
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             E-Commerce Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link  href={`/gallary/ecommerce`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>
@@ -57,7 +57,7 @@ const EcommerceWebsite = () => {
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             Construction Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link href={`/gallary/construction`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>
@@ -75,7 +75,7 @@ const EcommerceWebsite = () => {
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             Business Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link href={`/gallary/business`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>
