@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import WebsiteThemeCard from "./WebsiteThemeCard";
+import CategoriesHero from "./CategoriesHero";
 
 const EcommerceWebsite = () => {
   const webCategories = [
@@ -25,6 +26,13 @@ const EcommerceWebsite = () => {
 
   return (
     <div>
+
+
+
+<CategoriesHero />
+
+
+
       {/* E-Commerce Section */}
       <section className="mx-auto w-full max-w-[1400px] px-2.5 md:px-5 bg-gradient-to-r from-pink-100 to-white">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 py-10">
