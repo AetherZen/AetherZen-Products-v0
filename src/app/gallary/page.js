@@ -1,10 +1,15 @@
-import WebsiteCategory from "@/components/WebsiteCategory/WebsiteCategory";
+// import WebsiteCategory from "@/components/WebsiteCategory/WebsiteCategory";
+
+import CategoriesHero from "@/components/WebAllCategory/CategoriesHero";
+import EcommerceWebsite from "@/components/WebAllCategory/EcommerceWebsite";
 
 
 const page = () => {
     return (
         <div>
-            <WebsiteCategory />
+            {/* <WebsiteCategory /> */}
+<CategoriesHero />
+<EcommerceWebsite />
         </div>
     );
 };
