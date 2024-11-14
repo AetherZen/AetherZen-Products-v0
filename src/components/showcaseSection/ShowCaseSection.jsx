@@ -15,7 +15,7 @@ import ButtonPrimay from "../shared/ButtonPrimary/ButtonPrimay";
 import ButtonSecondary from "../shared/ButtonSecondary/ButtonSecondary";
 import Image from "next/image";
 
-export default function ShowCaseSection({data}) {
+export default function ShowCaseSection({project}) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   const demoArray = Array(9).fill(0);
 
