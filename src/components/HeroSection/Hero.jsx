@@ -13,7 +13,7 @@ const Hero = () => {
             </span>
             <span>
               <Image
-                className="h-4 w-4 lg:h-6 lg:w-6 object-cover"
+                className="h-4 w-4 lg:h-6 lg:w-6 object-cover hover:animate-spin"
                 src="https://i.postimg.cc/3JfyZLxQ/Spark-55.png"
                 alt="why us"
                 height={500}
@@ -26,7 +26,7 @@ const Hero = () => {
               We Provide Amazing Website Template and Development Service.
               <span className="inline-block ">
                 <Image
-                  className="h-5 w-5  lg:h-10 lg:w-14 object-cover"
+                  className="h-5 w-5  lg:h-10 lg:w-14 object-cover "
                   src="https://i.postimg.cc/Dz3s8L3X/Brutalist-70.png"
                   alt="why us"
                   height={500}
