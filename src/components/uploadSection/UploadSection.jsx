@@ -10,33 +10,25 @@ import { MdOutlineCancel } from "react-icons/md";
 import { FiPlusCircle } from "react-icons/fi";
 
 const UploadSection = () => {
-  const [images, setImages] = useState([]);
   const [singleFeature, setSingleFeature] = useState("");
-  const [allFeatures, setAllFeatures] = useState([]);
+  const [singleInfo, setSingleInfo] = useState({
+    title: "",
+    description: "",
+  });
   const [projectData, setProjectData] = useState({
     images: [],
     proName: "",
     shortDescription: "",
     proLink: "",
     features: [],
+    info: [],
   });
 
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
     const imageUrl = await uploadImageToImgBB(file);
-    setImages([...images, imageUrl]);
     setProjectData((prev) => {
-      return { ...prev, images };
-    });
-    console.log(projectData);
-  };
-
-  const handleRemove = (idx) => {
-    const filteredImages = images?.filter((images, id) => id !== idx);
-    setImages(filteredImages);
-    console.log(filteredImages);
-    setProjectData((prev) => {
-      return { ...prev, images };
+      return { ...prev, images: [...prev.images, imageUrl] };
     });
   };
 
@@ -49,12 +41,14 @@ const UploadSection = () => {
   };
 
   const handleAddFeatures = () => {
-    setAllFeatures((prev) => [...prev, singleFeature]);
+    if (!singleFeature) {
+      return;
+    }
+
     setProjectData((prev) => {
-      return { ...prev, features: allFeatures };
+      return { ...prev, features: [...prev.features, singleFeature] };
     });
     setSingleFeature("");
-    console.log(projectData);
   };
 
   return (
@@ -107,7 +101,7 @@ const UploadSection = () => {
             </div>
           </div>
           <div>
-            {images?.map((item, idx) => (
+            {projectData?.images?.map((item, idx) => (
               <div
                 key={idx}
                 className="flex justify-between px-2 mb-5 items-center border rounded-xl bg-[#DDDDDD0F]"
@@ -124,7 +118,14 @@ const UploadSection = () => {
                 </div>
                 <div>
                   <MdOutlineCancel
-                    onClick={() => handleRemove(idx)}
+                    onClick={() =>
+                      setProjectData((prev) => {
+                        return {
+                          ...prev,
+                          images: prev?.images.filter((_, id) => id !== idx),
+                        };
+                      })
+                    }
                     className="text-red-600 text-2xl cursor-pointer"
                   />
                 </div>
@@ -136,13 +137,16 @@ const UploadSection = () => {
 
       {/* Basic Information Section */}
       <div className="section-padding-y">
-        <div className="grid grid-cols-1 md:grid-cols-2  xl:gap-28 p-14 border rounded-2xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-10 xl:gap-28 p-5 xl:p-14 border rounded-2xl">
           <div className="">
-            <h1 className="text-xl font-semibold">Basic information*</h1>
-            <div className="px-4">
+            <h1 className="md:text-xl font-semibold">Basic information*</h1>
+            <div className="md:px-4">
               {/* project name */}
               <div className="mt-6">
-                <label htmlFor="proName" className="font-semibold block">
+                <label
+                  htmlFor="proName"
+                  className="font-semibold block  text-sm md:text-base"
+                >
                   Project Name{" "}
                   <span className="text-[#4D4D4D] font-normal">(required)</span>
                 </label>
@@ -150,7 +154,7 @@ const UploadSection = () => {
                   type="text"
                   name="proName"
                   placeholder="Enter Your Name"
-                  className="border-b py-1 w-full mt-4 focus:outline-none"
+                  className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
                   onChange={handleOnchange}
                 />
               </div>
@@ -159,31 +163,38 @@ const UploadSection = () => {
               <div className="mt-6">
                 <label
                   htmlFor="shortDescription"
-                  className="font-semibold block"
+                  className="font-semibold block text-sm md:text-base"
                 >
                   Project Short Description{" "}
-                  <span className="text-[#4D4D4D] font-normal">(required)</span>
+                  <span className="text-[#4D4D4D] font-normal ">
+                    (required)
+                  </span>
                 </label>
                 <input
                   type="text"
                   name="shortDescription"
                   placeholder="Enter Your Name"
-                  className="border-b py-1 w-full mt-4 focus:outline-none"
+                  className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
                   onChange={handleOnchange}
                 />
               </div>
 
               {/* project link */}
               <div className="mt-6">
-                <label htmlFor="proLink" className="font-semibold block">
+                <label
+                  htmlFor="proLink"
+                  className="font-semibold block text-sm md:text-base"
+                >
                   Project Link{" "}
-                  <span className="text-[#4D4D4D] font-normal">(required)</span>
+                  <span className="text-[#4D4D4D] font-normal ">
+                    (required)
+                  </span>
                 </label>
                 <input
                   type="url"
                   name="proLink"
                   placeholder="Enter Url..."
-                  className="border-b py-1 w-full mt-4 focus:outline-none"
+                  className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
                   onChange={handleOnchange}
                 />
               </div>
@@ -191,7 +202,10 @@ const UploadSection = () => {
               {/* project Features */}
               <div className="mt-6">
                 <div className="flex justify-between">
-                  <label htmlFor="features" className="font-semibold block">
+                  <label
+                    htmlFor="features"
+                    className="font-semibold block text-sm md:text-base"
+                  >
                     Project Features{" "}
                     <span className="text-[#4D4D4D] font-normal">
                       (required)
@@ -202,17 +216,126 @@ const UploadSection = () => {
                     className="text-xl cursor-pointer"
                   />
                 </div>
-                {allFeatures?.map((feature, idx) => (
-                  <p key={idx}>{idx + 1}. {feature}</p>
-                ))}
+                <div className="mt-4">
+                  {projectData?.features?.length > 0 &&
+                    projectData?.features?.map((feature, idx) => (
+                      <p
+                        className="flex justify-between mb-2 text-sm md:text-base"
+                        key={idx}
+                      >
+                        {idx + 1}. {feature}{" "}
+                        <MdOutlineCancel
+                          onClick={() =>
+                            setProjectData((prev) => {
+                              return {
+                                ...prev,
+                                features: prev?.features.filter(
+                                  (_, id) => id !== idx
+                                ),
+                              };
+                            })
+                          }
+                          className="text-lg cursor-pointer"
+                        />
+                      </p>
+                    ))}
+                </div>
                 <input
                   type="url"
                   name="features"
                   placeholder="Enter Url..."
-                  className="border-b py-1 w-full mt-4 focus:outline-none"
+                  className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
                   onChange={(e) => setSingleFeature(e.target.value)}
                   value={singleFeature}
                 />
+              </div>
+            </div>
+          </div>
+
+          <div className="">
+            <h1 className="md:text-xl font-semibold">Project information*</h1>
+
+            <div className="md:px-4 mt-6">
+              <div></div>
+              {/* project name */}
+              <div className="mt-6">
+                <label
+                  htmlFor="proName"
+                  className="font-semibold flex justify-between gap-5"
+                >
+                  <span className="block flex-1 text-sm md:text-base">
+                    Title
+                  </span>
+                  <span className="block flex-1 text-sm md:text-base">
+                    Description
+                  </span>
+                  <FiPlusCircle
+                    onClick={() => {
+                      if (!singleInfo?.title || !singleInfo?.description) {
+                        return;
+                      }
+                      setProjectData((prev) => {
+                        return {
+                          ...prev,
+                          info: [...prev.info, singleInfo],
+                        };
+                      });
+
+                      setSingleInfo({ title: "", description: "" });
+                    }}
+                    className="text-xl cursor-pointer"
+                  />
+                </label>
+                <div className="flex flex-col gap-1  my-5 px-6">
+                {projectData?.info?.map((item, idx) => (
+                    <p
+                      className="justify-between items-center w-full flex "
+                      key={idx}
+                    >
+                      <span className="inline-block font-bold flex-1">
+                        {idx + 1}. {item?.title}
+                      </span>{" "}
+                      <span className="inline-block items-start flex-1">
+                        {item?.description}
+                      </span>
+                    </p>
+                ))}
+                </div>
+                <div className="flex justify-between gap-5">
+                  <input
+                    type="text"
+                    name="pTitle"
+                    placeholder="Title"
+                    value={singleInfo?.title}
+                    className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
+                    onChange={(e) => {
+                      setSingleInfo((prev) => {
+                        return {
+                          ...prev,
+                          title: e.target.value,
+                        };
+                      });
+                    }}
+                  />
+                  <input
+                    type="text"
+                    name="pDescription"
+                    placeholder="description"
+                    value={singleInfo?.description}
+                    className="border-b py-1 w-full mt-4 focus:outline-none text-sm md:text-base"
+                    onChange={(e) => {
+                      setSingleInfo((prev) => {
+                        return {
+                          ...prev,
+                          description: e.target.value,
+                        };
+                      });
+                    }}
+                  />
+                  <div>
+                    <FiPlusCircle className="text-xl cursor-pointer invisible" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
