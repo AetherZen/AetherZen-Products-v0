@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import WebsiteThemeCard from "./WebsiteThemeCard";
+import CategoriesHero from "./CategoriesHero";
 
 const EcommerceWebsite = () => {
   const webCategories = [
@@ -25,13 +26,20 @@ const EcommerceWebsite = () => {
 
   return (
     <div>
+
+
+
+<CategoriesHero />
+
+
+
       {/* E-Commerce Section */}
       <section className="mx-auto w-full max-w-[1400px] px-2.5 md:px-5 bg-gradient-to-r from-pink-100 to-white">
         <div className="flex justify-between items-center max-w-7xl mx-auto px-8 py-10">
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             E-Commerce Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link  href={`/gallary/ecommerce`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>
@@ -49,7 +57,7 @@ const EcommerceWebsite = () => {
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             Construction Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link href={`/gallary/construction`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>
@@ -67,7 +75,7 @@ const EcommerceWebsite = () => {
           <h1 className="md:text-3xl uppercase text-xl font-bold text-black flex-1 md:max-w-[50%] max-w-[90%]">
             Business Website Theme
           </h1>
-          <Link href="#" className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
+          <Link href={`/gallary/business`} className="text-black bg-white px-4 py-2 text-sm rounded-full border border-gray-950 hover:bg-red-300 flex gap-3 justify-center items-center">
             Show More Theme
             <GoArrowUpRight className="text-lg" />
           </Link>

@@ -27,14 +27,14 @@ const WebsiteThemeCard = ({ categoryData }) => {
             <div className="flex space-x-4 mt-5">
               <Link
                 href="#"
-                className="text-black bg-white px-4 py-2 text-sm rounded-full hover:bg-red-300 flex gap-3 justify-center items-center"
+                className="text-black bg-white px-4 py-2 lg:text-sm text-xs rounded-full hover:bg-red-300 flex gap-3 justify-center items-center"
               >
                 Live Preview
                 <GoArrowUpRight className="text-lg" />
               </Link>
               <Link
                 href="#"
-                className="text-black bg-white px-4 py-2 text-sm rounded-full hover:bg-red-300 flex gap-3 justify-center items-center"
+                className="text-black bg-white px-4 py-2 lg:text-xs text-sm rounded-full hover:bg-red-300 flex gap-3 justify-center items-center"
               >
                 Buy Now
                 <GoArrowUpRight className="text-lg" />
